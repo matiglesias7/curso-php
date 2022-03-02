@@ -11,13 +11,13 @@
     <title>Hello, world!</title>
   </head>
   <body>
-        <?php include('./templates/header.php') ?>
+        <?php include('./proyecto/templates/header.php') ?>
 
         <div class="container">
             <div class="row mt-5">
                 <div class="col-lg-4 col-sm-12 d-flex justify-content-center mb-5">
                     <div class="card p-3" style="width: 18rem;">
-                        <img src="images/avatar.png" class="card-img-top">
+                        <img src="proyecto/images/avatar.png" class="card-img-top">
                         <div class="card-body">
                             <p class="card-text mb-5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="d-grid gap-2">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-12 d-flex justify-content-center mb-5">
                     <div class="card p-3" style="width: 18rem;">
-                        <img src="images/avatar.png" class="card-img-top">
+                        <img src="proyecto/images/avatar.png" class="card-img-top">
                         <div class="card-body">
                             <p class="card-text mb-5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="d-grid gap-2">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-12 d-flex justify-content-center mb-5">
                     <div class="card p-3" style="width: 18rem;">
-                        <img src="images/avatar.png" class="card-img-top">
+                        <img src="proyecto/images/avatar.png" class="card-img-top">
                         <div class="card-body">
                             <p class="card-text mb-5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="d-grid gap-2">
@@ -50,6 +50,6 @@
                 </div>
             </div>
         </div>
-        <?php include('./templates/footer.php') ?>
+        <?php include('./proyecto/templates/footer.php') ?>
   </body>
 </html>
