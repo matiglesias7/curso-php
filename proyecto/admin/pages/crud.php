@@ -11,6 +11,7 @@
   <body>
     <?php include('../templates/header.php') ?>
     <div class="container d-flex mt-5">
+        <!-- DATOS LIBROS -->
         <div class="card">
             <div class="card-header">
                 Datos de Libro
@@ -36,6 +37,10 @@
                     </div>
                 </form>
             </div>
+        </div>
+        <!-- LIBROS -->
+        <div class="libros">
+            
         </div>
     </div>
   </body>
