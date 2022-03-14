@@ -1,0 +1,22 @@
+.borde {
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 20px;
+}
+
+.active{
+    font-size: large;
+}
+
+.titulo{
+    color: blue;
+}
+
+.entrada{
+    padding: 20px;
+}
+
+.div{
+    background-image: none;
+}
