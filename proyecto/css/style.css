@@ -1,5 +1,7 @@
-.borde {
-    padding: 20px;
+.item {
+    border-radius: 50px;
+    border: solid;
+    background-color: red;
 }
 
 .active{
