@@ -1,4 +1,5 @@
 <?php
+    SESSION_START();
     $server = "localhost";
     $username = "root";
     $password = "";
@@ -8,5 +9,5 @@
     mysqli_query($db, "SET NAMES 'utf-8'");
 
     //INICIAR SESION
-    //SESSION_START();
+    
 ?>

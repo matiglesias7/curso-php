@@ -23,6 +23,13 @@
     <div class="form p-4 mt-5 bg-light bg-gradient bloque">
 
         <p class="fw-bold">Registro</p>
+
+        <?php if(isset($_SESSION['completado'])): ?>
+            <?= '<div>'.$_SESSION['completado'].'</div>'; ?>
+        <?php elseif(isset($_SESSION['errores']['general'])): ?>
+            <?= '<div>'.$_SESSION['errores']['general'].'</div>'; ?>
+        <?php endif; ?>
+
         <form action="registro.php" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>

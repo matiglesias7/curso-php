@@ -1,7 +1,6 @@
 <?php
     if(isset($_POST)){
-        requiere_once 'includes/conexion.php';
-        SESSION_START();
+        require_once 'includes/conexion.php';
         
         $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
         $apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : false;
@@ -48,14 +47,16 @@
 
 
             //INSERTAR DATOS EN LA BD
-            $query = "INSERT INTO USUARIO VALUES (null, $nombre, $apellidos, $email, $contraseña, CURDATE())";
+            $query = "INSERT INTO USUARIOS VALUES (null, '$nombre', '$apellidos', '$email', '$contraseña_hash', CURDATE())";
 
             $insertar = mysqli_query($db, $query);
 
             if($insertar){
-                $_SESSION['completado'] = "El registro se ha completado con exito"
+                $_SESSION['completado'] = "El registro se ha completado con exito";
+                
             } else {
-                $_SESSION['errores']['general'] = "Fallo al guardar usuario";
+                $_SESSION['errores']['general'] = "Fallo al guardar usuario: ".var_dump(mysqli_error($db));
+                die();
             }
 
         } else {
