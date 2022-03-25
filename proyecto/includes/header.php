@@ -1,5 +1,6 @@
 <?php
-    $url = 'http://'.$_SERVER['HTTP_HOST']
+    $url = 'http://'.$_SERVER['HTTP_HOST'];
+    var_dump($_SESSION);
 ?>
 
 <div class="mb-5" id="logo">
@@ -11,13 +12,14 @@
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    <a class="nav-link " href="#">Categoria 1</a>
-                    <a class="nav-link " href="#">Categoria 2</a>
-                    <a class="nav-link " href="#">Categoria 3</a>
-                    <a class="nav-link " href="#">Categoria 4</a>
-                    <a class="nav-link " href="#">Sobre Nosotros</a>
-                    <a class="nav-link " href="#">Contacto</a>
+                    <a class="nav-link active" aria-current="page" href=<?php echo $url."/curso-php/proyecto/index.php"; ?>>Inicio</a>
+                    <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/uno.php"; ?>>Categoria 1</a>
+                    <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/cat_dos.php"; ?>>Categoria 2</a>
+                    <<a class="nav-link" href=<?php echo $url."/curso-php/proyecto/cat_tres.php"; ?>>Categoria 3</a>
+                    <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/cat_cuatro.php"; ?>>Categoria 4</a>
+                    <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/sobre.php"; ?>>Sobre Nosotros</a>
+                    <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/contacto.php"; ?>>Contacto</a>
+                    <p>hola</p>
                 </div>
             </div>
         </div>

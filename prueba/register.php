@@ -1,6 +1,5 @@
 <?php
     require_once 'conexion.php';
-    SESSION_START();
     $errores = array();
     if(isset($_POST)){
         $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : null;
@@ -28,23 +27,17 @@
 
         if(!empty($contraseña)){
             $pwd_hash = password_hash($contraseña, PASSWORD_BCRYPT, ['cost'=>4]);
+            $_SESSION['contraseña'] = $pwd_hash;
         } else {
             $_errores['contraseña'] = 'Ingrese una Contraseña';
         }
 
-        if($errores == 0){
+        $_SESSION['errores'] = $_errores;
+
+        if(count($_errores) == 0){
             $query = "INSERT INTO USUARIOS VALUES (null, '$nombre', '$apellidos', '$email', '$pwd_hash', CURDATE())";
-            $insertar = mysqli_query($db, $query);
-
-            $_SESSION['conexion'] = 'hola';
+            $insertar = mysqli_query($conexion, $query);
         }
-
-        $_SESSION['errores'] = $errores;
-
-        echo $_SESSION['nombre'].'</br>';
-        echo $_SESSION['apellidos'].'</br>';
-        echo $_SESSION['email'].'</br>';
     }
-
     header('Location:index.php');
 ?>

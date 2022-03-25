@@ -42,23 +42,34 @@
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" class="form-control" name="nombre" id="nombre">
+                        <?php if(isset($_SESSION['errores']['nombre'])): ?>
+                            <?= $_SESSION['errores']['nombre'].'<br/><br/>';?>
+                        <?php endif; ?>
                     </div>
                     <div class="form-group">
                         <label for="apellidos">Apellidos:</label>
                         <input type="text" class="form-control" name="apellidos" id="apellidos">
+                        <?php if(isset($_SESSION['errores']['apellidos'])): ?>
+                            <?= $_SESSION['errores']['apellidos'].'<br/><br/>';?>
+                        <?php endif; ?>
                     </div>
                     <div class="form-group">
                         <label for="usuario">Email:</label>
                         <input type="text" class="form-control" name="email" id="email">
+                        <?php if(isset($_SESSION['errores']['email'])): ?>
+                            <?= $_SESSION['errores']['email'].'<br/><br/>';?>
+                        <?php endif; ?>
                     </div>
                     <div class="form-group">
                         <label for="usuario">Contraseña:</label>
                         <input type="password" class="form-control" name="contraseña" id="contraseña">
+                        <?php if(isset($_SESSION['errores']['contraseña'])): ?>
+                            <?= $_SESSION['errores']['contraseña'].'<br/><br/>';?>
+                        <?php endif; ?>
                     </div>
                     <div class="mt-4">
                         <button type="submit" name="submit" class="btn btn-primary">Registrar</button>
                     </div>
-                    <?php var_dump($_SESSION['conexion'])?>
                 </form>
             </div>
         </div>
