@@ -15,7 +15,7 @@
         <?php require_once 'includes/header.php'; ?>
         <div class="row p-5">
             <?php require_once 'includes/log.php'; ?>
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <div class="container bg-light bg-gradient p-3 bloque">
                     <p>Ultimas Entradas</p>
                     <div class="entrada">
@@ -41,5 +41,9 @@
                 </div>
             </div>
         </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
     </body>
 </html>

@@ -25,13 +25,10 @@
                     if (isset($_SESSION['errorlogin'])){
                         SESSION_UNSET($_SESSION['errorlogin']);
                     }
-                    header('Location:index.php');
                 } else {
                     $_SESSION['errorlogin'] = "Usuario/Contraseña incorrectas";
-                    echo $_SESSION['errorlogin'];
                 }
-            } else {
-
             }
         }  
+        header('Location:index.php');
     }

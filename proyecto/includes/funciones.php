@@ -8,6 +8,15 @@
         return $error;
     }
 
+    function mostrarMensaje($array, $campo){
+        $mensaje = '';
+        if (isset($array[$campo]) && !empty($campo)){
+            $mensaje = "<div class='justify-content-end nombre'>Bienvenido ".$array[$campo]."</div>";
+        }
+
+        return $mensaje;
+    }
+
     function borrarErrores(){
         $borrar = false;
         $_SESSION['errores'] = null;
@@ -17,4 +26,4 @@
         $borrar = session_unset();
 
         return $borrar;
-}
+    }

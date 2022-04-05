@@ -123,19 +123,30 @@ body{
 }
 
 /*BARRA LATERAL*/
-#sidebar{
-    float:right;
-    width: 27%;
-    height: auto;
+.sidebar{
+    min-width: 100%;
 }
 
+.sidebar .logo{
+    padding: .875rem 1.25rem;
+}
+
+.sidebar .menu{
+    width: 80rem;
+}
+
+.item {
+    display: block;
+    font-size: 25px;
+    padding: 20px;
+}
+
+
 .bloque{
+    padding: 0%;
     display:block;
-    width: 90%;
     margin: 0px auto;
-    margin-bottom: 35px;
     background: white;
-    padding: 15px;
     box-shadow: 0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3), 0px 0px 1px #FFFFFF inset, 0px -3px 2px rgba(0,0,0,0.25) inset; 
 }
 
@@ -271,7 +282,15 @@ input[type="submit"],
 }
 
 .nombre{
+    display: flex;
     color: white;
-    margin-right: 20px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: rgb(240, 240, 234);
 }
 
