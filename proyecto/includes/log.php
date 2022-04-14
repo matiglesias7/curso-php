@@ -2,7 +2,7 @@
     require_once 'includes/funciones.php'; 
 ?>
     <?php if(!isset($_SESSION['usuario'])): ?>
-        <div class="col-lg-3 mb-5">
+        <div class="col-lg-3">
             <div class="container bg-light bg-gradient bloque">
                 <div class="form p-4">
                     <p class="fs-4 fw-bold">Entrar a la web</p>
