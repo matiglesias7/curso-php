@@ -17,27 +17,27 @@
             <?php require_once 'includes/log.php'; ?>
             <div class="col-lg-9">
                 <div class="container bg-light bg-gradient p-3 bloque">
-                    <p>Ultimas Entradas</p>
+                    <p class="mb-4">Ultimas Entradas</p>
+                    <?php 
+                        $entradas = obtenerEntradas($db);
+                        while ($entrada = mysqli_fetch_assoc($entradas)):
+                    ?>
                     <div class="entrada">
-                        <img src="assets/img/icon/file.png" width="20px"><span class="titulo ms-4">Titulo de la entrada</span>
-                        <p class="contenido mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto unde rerum ipsam? Doloremque nam earum, aliquid quis voluptatum optio, fuga odio deserunt maxime aperiam facilis nulla? Maxime, blanditiis eveniet?</p>
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="assets/img/icon/file.png" width="80px">
+                            </div>
+                            <div class="col-9">
+                                <div class="row ms-2">
+                                    <span class="titulo"><?=$entrada['titulo']?></span>
+                                    <p><?=$entrada['nombre_cat']." | ".$entrada['fecha'] ?></p>
+                                    <p>Escrito por: <?=$entrada['nombre'].' '.$entrada['apellidos'] ?></p>
+                                    <p class="contenido mt-3"><?=$entrada['descripcion']?></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="entrada">
-                        <img src="assets/img/icon/file.png" width="20px"><span class="titulo ms-4">Titulo de la entrada</span>
-                        <p class="contenido mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto unde rerum ipsam? Doloremque nam earum, aliquid quis voluptatum optio, fuga odio deserunt maxime aperiam facilis nulla? Maxime, blanditiis eveniet?</p>
-                    </div>
-                    <div class="entrada">
-                        <img src="assets/img/icon/file.png" width="20px"><span class="titulo ms-4">Titulo de la entrada</span>
-                        <p class="contenido mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto unde rerum ipsam? Doloremque nam earum, aliquid quis voluptatum optio, fuga odio deserunt maxime aperiam facilis nulla? Maxime, blanditiis eveniet?</p>
-                    </div>
-                    <div class="entrada">
-                        <img src="assets/img/icon/file.png" width="20px"><span class="titulo ms-4">Titulo de la entrada</span>
-                        <p class="contenido mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto unde rerum ipsam? Doloremque nam earum, aliquid quis voluptatum optio, fuga odio deserunt maxime aperiam facilis nulla? Maxime, blanditiis eveniet?</p>
-                    </div>
-                    <div class="entrada">
-                        <img src="assets/img/icon/file.png" width="20px"><span class="titulo ms-4">Titulo de la entrada</span>
-                        <p class="contenido mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam architecto unde rerum ipsam? Doloremque nam earum, aliquid quis voluptatum optio, fuga odio deserunt maxime aperiam facilis nulla? Maxime, blanditiis eveniet?</p>
-                    </div>
+                    <?php endwhile;?>
                 </div>
             </div>
         </div>

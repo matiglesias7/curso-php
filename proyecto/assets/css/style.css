@@ -294,3 +294,6 @@ a:hover{
     background-color: rgb(240, 240, 234);
 }
 
+p{
+    margin-bottom: 0px;
+}

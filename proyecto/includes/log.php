@@ -30,7 +30,7 @@
             </div>
             <div class="form p-4 mt-3 bg-light bg-gradient bloque">
 
-                <p class="fw-bold">Registro</p>
+                <p class="fw-bold">Registro</p></br>
 
                 <form action="registro.php" method="POST">
                     <div class="form-group">

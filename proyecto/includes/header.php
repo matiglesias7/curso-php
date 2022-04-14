@@ -13,10 +13,12 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href=<?php echo $url."/curso-php/proyecto/index.php"; ?>>Inicio</a>
-                    <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/uno.php"; ?>>Categoria 1</a>
-                    <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/cat_dos.php"; ?>>Categoria 2</a>
-                    <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/cat_tres.php"; ?>>Categoria 3</a>
-                    <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/cat_cuatro.php"; ?>>Categoria 4</a>
+                    <?php 
+                        $categorias = obtenerCategorias($db);
+                        while($categoria = mysqli_fetch_assoc($categorias)): 
+                    ?>
+                        <a class="nav-link" href="categoria.php?id=<?=$categoria['id']?>"><?=$categoria['nombre_cat']?></a>
+                    <?php endwhile; ?>
                     <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/sobre.php"; ?>>Sobre Nosotros</a>
                     <a class="nav-link" href=<?php echo $url."/curso-php/proyecto/contacto.php"; ?>>Contacto</a>
                 </div>
