@@ -14,9 +14,16 @@
                     <div class="text-center mt-5">
                         <button class="btn btn-success">Enviar</button>
                     </div>
+                    <?php if(isset($_SESSION['errores']['nom_cat'])):?>
+                        <div class="text-center mt-5"><p><?=$_SESSION['errores']['nom_cat'];?></p></div>
+                    <?php endif; ?>
+                    <?php if(isset($_SESSION['completado'])):?>
+                        <div class="text-center mt-5"><p><?=$_SESSION['completado'];?></p></div>
+                    <?php endif; ?>
                 </div>
             </form>
         </div>
+        <?php borrarErrores(); ?>
     </div>
 </div>
 

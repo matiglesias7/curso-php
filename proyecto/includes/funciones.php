@@ -24,7 +24,6 @@
         if (isset($_SESSION['completado'])){
             $_SESSION['completado'] = null;
         }
-        $borrar = session_unset();
 
         return $borrar;
     }

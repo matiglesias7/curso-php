@@ -14,7 +14,7 @@
             if(!$insertar){
                 $errores['ins_cat'] = "ERROR BD: ".mysqli_error($db);
             } else{
-                $_SESSION['InsCatComplete'] = "Se ha creado la categoria con exito";
+                $_SESSION['completado'] = "Se ha creado la categoria con exito";
             }
         }
     }
