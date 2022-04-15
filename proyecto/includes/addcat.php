@@ -1,20 +1,27 @@
 <?php 
+
     require_once('conexion.php');
-    var_dump($_POST);
-    echo $_POST['categoria'];
-    if(isset($_POST)){
-        $nombre = $_POST['categoria'];
-        if(empty($nombre) || false){
-            $_SESSION['errores']['categoria'] = "Debe ingresar un nombre";
-        } else{
-            $sql = "INSERT INTO categorias VALUES (null, $nombre)";
+    $errores = array();
+    if(!$db){
+        $errores['connDB'] = "Se ha producido un error en la conexion a BD: ";
+    } else{
+        $nombre_categoria = $_POST['categoria'];
+        if(empty($nombre_categoria)){
+            $errores['nom_cat'] = "Debe insertar un nombre de categoria";
+        } else {
+            $sql = "INSERT INTO CATEGORIAS VALUES (null, '$nombre_categoria')";
             $insertar = mysqli_query($db, $sql);
-            if (!$insertar){
-                $_SESSION['errores']['categoria_query'] = "Ha ocurrido un error en la insercion de la categoria";
+            if(!$insertar){
+                $errores['ins_cat'] = "ERROR BD: ".mysqli_error($db);
+            } else{
+                $_SESSION['InsCatComplete'] = "Se ha creado la categoria con exito";
             }
-            header('Location:add_cat.php');
         }
     }
+    $_SESSION['errores'] = $errores;
+    header('Location:../crear_categoria.php');
+?>
+
 
 
     
