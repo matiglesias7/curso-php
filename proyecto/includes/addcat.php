@@ -1,8 +1,9 @@
 <?php 
     require_once('conexion.php');
     var_dump($_POST);
+    echo $_POST['categoria'];
     if(isset($_POST)){
-        $nombre = $_POST['nombre_cat'];
+        $nombre = $_POST['categoria'];
         if(empty($nombre) || false){
             $_SESSION['errores']['categoria'] = "Debe ingresar un nombre";
         } else{

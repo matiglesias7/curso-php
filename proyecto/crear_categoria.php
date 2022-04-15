@@ -5,11 +5,11 @@
     <div class="col-lg-9 bloque d-flex align-items-center">
         <div class="container col-6">
             <h1 class="text-center mb-5">Añadir Categoria</h1>
-            <form action="includes/add_cat.php" method="POST">
+            <form action="includes/addcat.php" method="POST">
                 <div class="form-group">
                     <div class="d-flex"> 
                         <label for="" class="form-label">Nombre Categoria</label>
-                        <input type="text" class="form-control" name="nombre_cat" id="nombre_cat">
+                        <input type="text" class="form-control" name="categoria" id="categoria">
                     </div>
                     <div class="text-center mt-5">
                         <button class="btn btn-success">Enviar</button>
